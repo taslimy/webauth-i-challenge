@@ -18,6 +18,8 @@ server.get("/", (req, res) => {
 // Middlewares
 
 // Define Routes
+server.use("/api/auth", require("./routes/auth-router")); // register & login
+server.use("/api/users", require("./routes/user-router")); // all users
 
 // Logger
 function logger(req, res, next) {
